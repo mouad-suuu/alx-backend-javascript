@@ -1,10 +1,10 @@
 module.exports = {
   presets: [
     [
-      "@babel/preset-env",
+      '@babel/preset-env',
       {
         targets: {
-          node: "current", // For Jest tests running in a Node environment
+          node: 'current',
         },
       },
     ],
