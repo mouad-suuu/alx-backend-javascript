@@ -9,11 +9,28 @@ export default class Car {
     return this._brand;
   }
 
+  set brand(brand) {
+    this._brand = brand;
+  }
+
   get motor() {
     return this._motor;
   }
 
+  set motor(motor) {
+    return (this._motor = motor);
+  }
+
   get color() {
     return this._color;
+  }
+
+  set color(color) {
+    return (this._color = color);
+  }
+
+  cloneCar() {
+    const Species = this.constructor[Symbol.species];
+    return new Species();
   }
 }
