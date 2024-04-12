@@ -1,10 +1,11 @@
-import Building from "./5-building";
+import Building from './5-building';
 
-class SkyHighBuilding {
+export default class SkyHighBuilding extends Building {
   constructor(sqft, floors) {
     super(sqft);
     this.floors = floors;
   }
+
   get floors() {
     return this._floors;
   }
@@ -12,6 +13,7 @@ class SkyHighBuilding {
   set floors(value) {
     this._floors = value;
   }
+
   evacuationWarnigMessage() {
     return `Evacuate slowly the ${this.floors} floors`;
   }
