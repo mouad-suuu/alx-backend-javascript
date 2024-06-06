@@ -6,12 +6,9 @@ const calculateNumber = (type, a, b) => {
     return Math.round(a) - Math.round(b);
   }
   if (type === "DIVIDE") {
-    if (b === 0) {
-      return "Error";
-    } else if (b !== 0) {
-      return Math.round(a) / Math.round(b);
-    }
+    return Math.round(b) === 0 ? "Error" : Math.round(a) / Math.round(b);
   }
+  return 0;
 };
 
 module.exports = calculateNumber;
